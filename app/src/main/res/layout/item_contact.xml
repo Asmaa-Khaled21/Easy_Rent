@@ -87,7 +87,7 @@
             android:textColor="@color/black"
             android:layout_weight=".5"
             />
-        <Button
+       <!-- <Button
             android:id="@+id/Button_Bay"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
             android:layout_weight=".3"
             android:layout_marginEnd="10dp"
             android:background="@color/Orange"
-            />
+            /> -->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
