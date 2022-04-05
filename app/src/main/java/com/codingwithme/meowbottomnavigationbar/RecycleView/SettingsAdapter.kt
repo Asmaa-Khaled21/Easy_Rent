@@ -48,6 +48,6 @@ class SettingsAdapter (var items:List<SettingsItem>): RecyclerView.Adapter<Setti
         val threeItem : TextView =itemView.findViewById(R.id.GBS)
         val fourItem : TextView =itemView.findViewById(R.id.clock)
         val fiveItem : TextView =itemView.findViewById(R.id.money)
-       // val sixItem : Button = itemView.findViewById(R.id.Button_Bay)
+        //val sixItem : Button = itemView.findViewById(R.id.Button_Bay)
     }
 }
