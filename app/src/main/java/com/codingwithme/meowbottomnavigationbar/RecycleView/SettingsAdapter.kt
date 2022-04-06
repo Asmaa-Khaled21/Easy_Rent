@@ -13,21 +13,23 @@ class SettingsAdapter (var items:List<SettingsItem>): RecyclerView.Adapter<Setti
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_contact,parent,false)
         return ViewHolder(view)
+
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item=items.get(position)
-        holder.oneItem.setText(item.oneItem)
-        holder.twoItem.setText(item.twoItem)
-        holder.threeItem.setText(item.threeItem)
-        holder.fourItem.setText(item.fourItem)
+        val let = item.oneItem?.let { holder.oneItem.setText(it) }
+        holder.twoItem.setText(item.twoItem!!)
+        holder.threeItem.setText(item.threeItem!!)
+        holder.fourItem.setText(item.fourItem!!)
         holder.fiveItem.setText(item.fiveItem)
 
-        if (OnButtonClickListener!=null){
+
+       /* if (OnButtonClickListener!=null){
             holder.itemView.setOnClickListener{
                 //  OnItemClickListener.OnItemClick(position,item)
             }
-        }
+        }*/
 
     }
 
@@ -36,10 +38,11 @@ class SettingsAdapter (var items:List<SettingsItem>): RecyclerView.Adapter<Setti
     }
 
 
-    var OnButtonClickListener :OnItemClickListener?=null
-    interface OnItemClickListener{
+    /*var OnButtonClickListener :OnItemClickListener?=null
+
+   interface OnItemClickListener{
         fun OnItemClick(pos:Int ,item:SettingsItem)
-    }
+    }*/
 
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){

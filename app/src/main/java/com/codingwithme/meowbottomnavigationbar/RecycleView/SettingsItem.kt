@@ -1,11 +1,14 @@
 package com.codingwithme.meowbottomnavigationbar.RecycleView
 
-import android.widget.Button
+import android.view.View
+import android.widget.TextView
 
-data class SettingsItem ( val oneItem:String?=null,
-                          val twoItem:String?=null,
-                          val threeItem:String?=null,
-                          val fourItem:String?=null,
-                          val fiveItem:String?=null
+data class SettingsItem(
+    val oneItem: Int? =null,
+    val twoItem: Int? =null,
+    val threeItem: Int? =null,
+    val fourItem:Int?=null,
+    val fiveItem:Int?=null,
+
                           //val sixItem:Button?=null
     )
