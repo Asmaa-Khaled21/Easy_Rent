@@ -22,7 +22,7 @@ class SettingsAdapter (var items:List<SettingsItem>): RecyclerView.Adapter<Setti
         holder.twoItem.setText(item.twoItem!!)
         holder.threeItem.setText(item.threeItem!!)
         holder.fourItem.setText(item.fourItem!!)
-        holder.fiveItem.setText(item.fiveItem)
+        holder.fiveItem.setText(item.fiveItem!!)
 
 
        /* if (OnButtonClickListener!=null){
