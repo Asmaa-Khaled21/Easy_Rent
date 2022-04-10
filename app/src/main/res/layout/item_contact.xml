@@ -18,28 +18,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="10dp"
         >
+        <ImageView
+            android:id="@+id/image_House_NUMBER"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_house_number"
+            android:textColor="@color/black"
+            android:layout_weight=".1"
+            />
         <TextView
             android:id="@+id/House_NUMBER"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_house_number"
             android:text="House Number"
             android:textColor="@color/black"
             android:layout_weight=".5"
-            android:drawablePadding="10dp"
+            android:layout_marginStart="5dp"
             />
-
+        <ImageView
+            android:id="@+id/image_Day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_day"
+            android:layout_weight=".1"
+            />
         <TextView
             android:id="@+id/Day"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_day"
             android:textColor="@color/black"
             android:text="15 December"
             android:layout_weight=".5"
             android:drawablePadding="10dp"
+            android:layout_marginStart="5dp"
             />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/line2"
         android:layout_width="match_parent"
@@ -49,25 +63,39 @@
         app:layout_constraintTop_toBottomOf="@+id/line1"
         android:padding="10dp"
         >
+        <ImageView
+            android:id="@+id/image_GBS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_gps"
+            android:layout_weight=".1"
+            android:src="@drawable/ic_gps"
+            />
         <TextView
             android:id="@+id/GBS"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_gps"
             android:text="Helwan"
             android:textColor="@color/black"
             android:layout_weight=".5"
-            android:drawablePadding="10dp"
+            android:layout_marginStart="5dp"
+            />
+        <ImageView
+            android:id="@+id/image_clock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_clock"
+            android:layout_weight=".1"
+            android:src="@drawable/ic_clock"
             />
         <TextView
             android:id="@+id/clock"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_clock"
             android:text="10 Day Left"
             android:textColor="@color/black"
             android:layout_weight=".5"
-            android:drawablePadding="10dp"/>
+            android:layout_marginStart="5dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -86,7 +114,7 @@
             android:textColor="@color/black"
             android:layout_weight=".5"
             />
-       <!-- <Button
+       <Button
             android:id="@+id/Button_Bay"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -95,7 +123,8 @@
             android:layout_weight=".3"
             android:layout_marginEnd="10dp"
             android:background="@color/Orange"
-            /> -->
+            />
+        <!--  -->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

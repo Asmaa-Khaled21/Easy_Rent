@@ -6,20 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ReceiptsFragment"
     android:orientation="vertical"
-    android:gravity="center">>
+    >
+
+  <include
+      android:id="@+id/aToolbar"
+      layout="@layout/toolbar"
+    ></include>
 
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_receipts"
-        app:tint="@color/Orange" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/Orange"
-        android:textAlignment="center"
-        android:text="Receipts" />
+
 
 </LinearLayout>

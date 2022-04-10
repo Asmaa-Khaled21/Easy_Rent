@@ -1,14 +1,17 @@
 package com.codingwithme.meowbottomnavigationbar.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.codingwithme.meowbottomnavigationbar.PayActivity
 import com.codingwithme.meowbottomnavigationbar.R
 import com.codingwithme.meowbottomnavigationbar.RecycleView.SettingsAdapter
 import com.codingwithme.meowbottomnavigationbar.RecycleView.SettingsItem
+
 
 class HomeFragment : Fragment() {
 
@@ -26,25 +29,39 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        recycleView = view.findViewById(R.id.RecycleView_Ajar)
-        //createItemSetttingslist()
-        loadDate()
-        settingsAdapter=SettingsAdapter(itemList)
-        recycleView.adapter=settingsAdapter
-        // after starting app show first fragment
+        initRecycleView()
     }
+        fun initRecycleView(){
+
+            recycleView = requireView().findViewById(R.id.RecycleView_Ajar)
+            //createItemSetttingslist()
+            loadDate()
+            settingsAdapter=SettingsAdapter(itemList)
+            settingsAdapter.onItemClickListener =object :SettingsAdapter.OnItemClickListener{
+                override fun onItemClick(pos: Int, item: SettingsItem) {
+
+                    activity?.let{
+                        val intent = Intent (it, PayActivity::class.java)
+                        it.startActivity(intent)
+                    }
+                }
+            }
+            recycleView.adapter=settingsAdapter
+        }
+
 
     fun loadDate(){
         itemList= mutableListOf();  //create empty list
-        for(i in 0..50 step 1)
+        for(i in 1..20)
         { itemList.add(
             SettingsItem(
-            oneItem = R.id.House_NUMBER, twoItem =R.id.Day, threeItem = R.id.GBS,fourItem = R.id.clock,
-                fiveItem = R.id.money
 
-        ))
-
+                oneImage = R.id.image_House_NUMBER, oneText = R.id.House_NUMBER.toString(),
+                twoImage = R.id.image_Day, twoText = R.id.Day.toString(),
+                threeImage = R.id.image_GBS, threeText = R.id.GBS.toString(),
+                fourImage = R.id.image_clock, fourText = R.id.clock.toString(),
+                fiveText = R.id.money.toString(), sixItem = R.id.Button_Bay
+                ))
         }}
 
     companion object {
