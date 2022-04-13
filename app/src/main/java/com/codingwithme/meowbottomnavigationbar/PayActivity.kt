@@ -18,7 +18,9 @@ class PayActivity : AppCompatActivity() {
 
         fawryText = findViewById(R.id.FawrytText)
         creditcardText = findViewById(R.id.CreditText)
-        startFragment()
+
+        startFragment();
+
         fawryText.setOnClickListener{
          supportFragmentManager.beginTransaction()
              .replace(R.id.frafment_container,CreditCardFragment())
