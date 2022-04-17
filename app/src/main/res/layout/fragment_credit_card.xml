@@ -16,6 +16,7 @@
        android:textSize="20dp"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent"
+       android:layout_margin="20dp"
        />
     <EditText
         android:id="@+id/Edit_Name_on_card"
@@ -23,6 +24,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/Name_on_card"
         app:layout_constraintTop_toBottomOf="@id/Name_on_card"
+        android:background="@drawable/edit_text"
+        android:hint="Asmaa"
+        android:padding="15dp"
+        android:layout_margin="20dp"
         />
     <TextView
         android:id="@+id/Card_number"
@@ -33,6 +38,7 @@
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Edit_Name_on_card"
+        android:layout_margin="20dp"
         />
     <EditText
         android:id="@+id/Edit_Card_number"
@@ -40,6 +46,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/Card_number"
         app:layout_constraintTop_toBottomOf="@id/Card_number"
+        android:padding="15dp"
+        android:background="@drawable/edit_text"
+        android:layout_margin="20dp"
         />
 
 
@@ -58,6 +67,7 @@
             android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_weight=".5"
+            android:layout_margin="20dp"
             />
         <TextView
             android:id="@+id/CVC"
@@ -67,6 +77,7 @@
             android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_weight=".5"
+            android:layout_margin="20dp"
             />
     </LinearLayout>
 
@@ -74,7 +85,7 @@
         android:id="@+id/Edit_View"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Text_View"
         app:layout_constraintTop_toBottomOf="@id/Text_View"
         >
         <EditText
@@ -82,6 +93,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
+            android:padding="15dp"
+            android:background="@drawable/edit_text"
+            android:layout_margin="20dp"
             />
 
         <EditText
@@ -89,6 +103,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
+            android:padding="15dp"
+            android:background="@drawable/edit_text"
+            android:layout_margin="20dp"
             />
     </LinearLayout>
 

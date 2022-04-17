@@ -16,12 +16,17 @@ class PayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pay)
 
+
         fawryText = findViewById(R.id.FawrytText)
         creditcardText = findViewById(R.id.CreditText)
 
         startFragment();
 
         fawryText.setOnClickListener{
+          //  fawryText.setBackgroundColor(resources.getColor(R.color.Dark_Blue));
+           // fawryText.setTextColor(resources.getColor(R.color.white))
+           // fawryText .setImageResource(R.drawable.actions_record);
+
          supportFragmentManager.beginTransaction()
              .replace(R.id.frafment_container,CreditCardFragment())
              .addToBackStack("Fawry")
