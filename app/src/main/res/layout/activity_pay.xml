@@ -60,6 +60,30 @@
         android:text="Payment method"
         android:paddingTop="10dp"
         />
+ <!--
+   <ImageView
+        android:id="@+id/fawry_pay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Payment_method"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/ic_fawry_blue"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintHeight_percent=".1"
+        />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/fawry_pay"
+        app:layout_constraintTop_toTopOf="@id/fawry_pay"
+        app:layout_constraintBottom_toBottomOf="@id/fawry_pay"
+        android:background="@drawable/rectangle"
+        android:src="@drawable/ic_creditcard_blue"
+        app:layout_constraintWidth_percent=".5"
+
+        /> -->
 
     <LinearLayout
         android:id="@+id/Linear_Pay"
@@ -69,13 +93,13 @@
         app:layout_constraintTop_toBottomOf="@id/Payment_method"
         android:padding="20dp"
         >
-        <TextView
+        <Button
             android:id="@+id/FawrytText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Fawry"
-            android:textColor="@color/white"
             android:drawableTop="@drawable/ic_fawry"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -87,13 +111,14 @@
             android:background="@drawable/rectangle"
             android:backgroundTint="@color/Dark_Blue"
             />
-        <TextView
+
+        <Button
             android:id="@+id/CreditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Credit card"
             android:textColor="@color/Dark_Blue"
-            android:drawableTop="@drawable/ic_creditcard_blue"
+            android:drawableTop="@drawable/button_creditcard"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -102,10 +127,12 @@
             android:gravity="center"
             android:layout_weight=".5"
             android:background="@drawable/rectangle"
+            android:backgroundTint="@color/white"
             android:drawablePadding="10dp"
             />
 
     </LinearLayout>
+
 
     <FrameLayout
         android:id="@+id/frafment_container"
