@@ -13,6 +13,7 @@
     <color name="Background">#F9F9F9</color>
     <color name="TransparentColor">#00FFFFFF</color>
     <color name="textColor">#FFFFFFFF</color>
+    <color name="Red">#CC0E0E</color>
 
 
 </resources>

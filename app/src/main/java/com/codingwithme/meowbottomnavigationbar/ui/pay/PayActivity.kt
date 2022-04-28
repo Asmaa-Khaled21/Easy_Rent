@@ -1,16 +1,11 @@
-package com.codingwithme.meowbottomnavigationbar
+package com.codingwithme.meowbottomnavigationbar.ui.pay
 
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import com.codingwithme.meowbottomnavigationbar.Fragments.CreditCardFragment
-import com.codingwithme.meowbottomnavigationbar.Fragments.FawryFragment
-import kotlinx.android.synthetic.main.activity_login.*
+import com.codingwithme.meowbottomnavigationbar.R
 import kotlinx.android.synthetic.main.activity_pay.*
 
 

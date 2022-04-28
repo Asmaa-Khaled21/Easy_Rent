@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity"
+        <activity android:name=".ui.main.MainActivity"
             android:exported="true" />
 
-        <activity android:name=".PayActivity"
+        <activity android:name=".ui.pay.PayActivity"
             android:exported="true" />
 
-        <activity android:name=".LoginActivity"
+        <activity android:name="com.codingwithme.meowbottomnavigationbar.ui.login.LoginActivity"
             android:exported="true" />
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,18 +1,13 @@
-package com.codingwithme.meowbottomnavigationbar
+package com.codingwithme.meowbottomnavigationbar.ui.main
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.TextUtils.replace
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.codingwithme.meowbottomnavigationbar.Fragments.HomeFragment
 import com.codingwithme.meowbottomnavigationbar.Fragments.NotificationFragment
 import com.codingwithme.meowbottomnavigationbar.Fragments.ReceiptsFragment
 import com.codingwithme.meowbottomnavigationbar.Fragments.SettingsFragment
-import com.codingwithme.meowbottomnavigationbar.RecycleView.SettingsAdapter
-import com.codingwithme.meowbottomnavigationbar.RecycleView.SettingsItem
+import com.codingwithme.meowbottomnavigationbar.R
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
@@ -22,10 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         addFragment(HomeFragment.newInstance())
         bottomNavigation.show(0)
-        bottomNavigation.add(MeowBottomNavigation.Model(0,R.drawable.ic_home))
-        bottomNavigation.add(MeowBottomNavigation.Model(1,R.drawable.ic_receipts))
-        bottomNavigation.add(MeowBottomNavigation.Model(2,R.drawable.ic_notificationbar))
-        bottomNavigation.add(MeowBottomNavigation.Model(3,R.drawable.ic_setting))
+        bottomNavigation.add(MeowBottomNavigation.Model(0, R.drawable.ic_home))
+        bottomNavigation.add(MeowBottomNavigation.Model(1, R.drawable.ic_receipts))
+        bottomNavigation.add(MeowBottomNavigation.Model(2, R.drawable.ic_notificationbar))
+        bottomNavigation.add(MeowBottomNavigation.Model(3, R.drawable.ic_setting))
 
         bottomNavigation.setOnClickMenuListener {
             when(it.id){
