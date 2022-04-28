@@ -1,52 +1,37 @@
 package com.codingwithme.meowbottomnavigationbar
 
+import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.codingwithme.meowbottomnavigationbar.Fragments.CreditCardFragment
 import com.codingwithme.meowbottomnavigationbar.Fragments.FawryFragment
+import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_pay.*
 
 
 class PayActivity : AppCompatActivity() {
-    lateinit var fawryText:Button
-    lateinit var creditcardText:Button
-
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pay)
 
-        fawryText = findViewById(R.id.FawrytText)
-        creditcardText = findViewById(R.id.CreditText)
-        startFragment()
+        creditText.setOnClickListener{
 
-        fawryText.setOnClickListener{
-//            creditcardText.setBackgroundColor(resources.getColor(R.color.white))
-//            creditcardText.setTextColor(resources.getColor(R.color.Dark_Blue))
-//            fawryText.setBackgroundColor(resources.getColor(R.color.Dark_Blue))
-//            fawryText.setTextColor(resources.getColor(R.color.white))
-            supportFragmentManager.beginTransaction()
-             .replace(R.id.frafment_container,FawryFragment())
-             .addToBackStack("Fawry")
-             .commit()
+            creditText.background= resources.getDrawable(R.drawable.ic_credit_select,null)
+            fawrytText.background = null
+            creditLayout.visibility = View.VISIBLE
+            fawryLayout.visibility = View.GONE
         }
-        creditcardText.setOnClickListener {
-//            creditcardText.setBackgroundColor(resources.getColor(R.color.Dark_Blue))
-//            creditcardText.setTextColor(resources.getColor(R.color.white))
-//            fawryText.setBackgroundColor(resources.getColor(R.color.white))
-//            fawryText.setTextColor(resources.getColor(R.color.Dark_Blue))
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.frafment_container,CreditCardFragment())
-                .addToBackStack("CreditCard")
-                .commit()
+        fawrytText.setOnClickListener {
+            creditText.background = null
+            fawrytText.background = resources.getDrawable(R.drawable.switch_trcks,null)
+            creditLayout.visibility = View.GONE
+            fawryLayout.visibility = View.VISIBLE
         }
-    }
-
-   private fun startFragment() {
-        supportFragmentManager.beginTransaction()
-            .add(R.id.frafment_container,CreditCardFragment())
-            .addToBackStack("Fawry")
-            .commit()
     }
 }
