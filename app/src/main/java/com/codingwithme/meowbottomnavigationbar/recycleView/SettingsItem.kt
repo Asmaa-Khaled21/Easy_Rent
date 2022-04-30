@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.RecycleView
+package com.codingwithme.meowbottomnavigationbar.recycleView
 
 data class SettingsItem(
     val oneImage:Int? =null,

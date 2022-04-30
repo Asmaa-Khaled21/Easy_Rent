@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.RecycleView
+package com.codingwithme.meowbottomnavigationbar.recycleView
 
 import android.view.LayoutInflater
 import android.view.View

@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.Api
+package com.codingwithme.meowbottomnavigationbar.api
 
 import android.util.Log
 import okhttp3.OkHttpClient

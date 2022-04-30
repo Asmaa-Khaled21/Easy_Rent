@@ -1,7 +1,5 @@
-package com.codingwithme.meowbottomnavigationbar.RecycleView
+package com.codingwithme.meowbottomnavigationbar.recycleView
 
-import android.app.Notification
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

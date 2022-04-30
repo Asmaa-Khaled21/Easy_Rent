@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.RecycleView
+package com.codingwithme.meowbottomnavigationbar.recycleView
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey

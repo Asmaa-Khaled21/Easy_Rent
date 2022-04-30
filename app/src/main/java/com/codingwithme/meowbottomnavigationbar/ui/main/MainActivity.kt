@@ -3,10 +3,10 @@ package com.codingwithme.meowbottomnavigationbar.ui.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.codingwithme.meowbottomnavigationbar.Fragments.HomeFragment
-import com.codingwithme.meowbottomnavigationbar.Fragments.NotificationFragment
-import com.codingwithme.meowbottomnavigationbar.Fragments.ReceiptsFragment
-import com.codingwithme.meowbottomnavigationbar.Fragments.SettingsFragment
+import com.codingwithme.meowbottomnavigationbar.fragments.HomeFragment
+import com.codingwithme.meowbottomnavigationbar.fragments.NotificationFragment
+import com.codingwithme.meowbottomnavigationbar.fragments.ReceiptsFragment
+import com.codingwithme.meowbottomnavigationbar.fragments.SettingsFragment
 import com.codingwithme.meowbottomnavigationbar.R
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import kotlinx.android.synthetic.main.activity_main.*

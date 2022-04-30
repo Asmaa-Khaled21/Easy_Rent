@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.Fragments
+package com.codingwithme.meowbottomnavigationbar.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.codingwithme.meowbottomnavigationbar.R
-import com.codingwithme.meowbottomnavigationbar.RecycleView.NotificationAdapter
+import com.codingwithme.meowbottomnavigationbar.recycleView.NotificationAdapter
 
 class NotificationFragment : Fragment() {
 

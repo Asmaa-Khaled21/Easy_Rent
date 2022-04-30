@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.Fragments
+package com.codingwithme.meowbottomnavigationbar.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,21 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import com.codingwithme.meowbottomnavigationbar.R
 
-class SettingsFragment : Fragment() {
+class CreditCardFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+        return inflater.inflate(R.layout.fragment_credit_card, container, false)
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() =
-            SettingsFragment().apply {
-                arguments = Bundle().apply {}
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 }

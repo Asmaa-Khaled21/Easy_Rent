@@ -2,33 +2,23 @@ package com.codingwithme.meowbottomnavigationbar.ui.login
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.codingwithme.meowbottomnavigationbar.base.BaseActivity
 import com.codingwithme.meowbottomnavigationbar.ui.main.MainActivity
 import com.codingwithme.meowbottomnavigationbar.R
 import com.codingwithme.meowbottomnavigationbar.databinding.ActivityLoginBinding
 
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_main.*
-
-
-
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() ,Navigator{
       @RequiresApi(Build.VERSION_CODES.M)
-
-      lateinit var viewModel: LoginViewModel
-      lateinit var viewBinding:ActivityLoginBinding
-
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-
-            viewBinding=DataBindingUtil.setContentView(this, R.layout.activity_login)
-            viewModel=ViewModelProvider(this).get(LoginViewModel::class.java)
-            viewBinding.viewModel = viewModel
+            viewDataBinding.viewModel = viewModel
+            viewModel.navigator =this
 
             singUp.setOnClickListener {
                 singUp.background = resources.getDrawable(R.drawable.switch_trcks,null)
@@ -50,4 +40,13 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this@LoginActivity, MainActivity::class.java))
             }
         }
+
+    override fun getLayoutId(): Int {
+       return R.layout.activity_login
+    }
+
+    override fun initializeViewModel(): LoginViewModel {
+        return ViewModelProvider(this).get(LoginViewModel::class.java)
+    }
+
     }

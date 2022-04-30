@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.Fragments
+package com.codingwithme.meowbottomnavigationbar.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.codingwithme.meowbottomnavigationbar.ui.pay.PayActivity
 import com.codingwithme.meowbottomnavigationbar.R
-import com.codingwithme.meowbottomnavigationbar.RecycleView.SettingsAdapter
-import com.codingwithme.meowbottomnavigationbar.RecycleView.SettingsItem
+import com.codingwithme.meowbottomnavigationbar.recycleView.SettingsAdapter
+import com.codingwithme.meowbottomnavigationbar.recycleView.SettingsItem
 
 
 class HomeFragment : Fragment() {

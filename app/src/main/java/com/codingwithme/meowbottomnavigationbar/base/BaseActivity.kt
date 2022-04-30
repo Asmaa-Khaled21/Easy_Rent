@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar
+package com.codingwithme.meowbottomnavigationbar.base
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import com.codingwithme.meowbottomnavigationbar.ui.login.LoginViewModel
 
 abstract class BaseActivity<DB:ViewDataBinding,VM:ViewModel>:AppCompatActivity() {
 
@@ -20,12 +18,10 @@ abstract class BaseActivity<DB:ViewDataBinding,VM:ViewModel>:AppCompatActivity()
         viewDataBinding= DataBindingUtil.setContentView(this,getLayoutId() )
         viewModel=initializeViewModel()
 
-
     }
 
      abstract fun getLayoutId():Int
-    abstract fun initializeViewModel():VM
-
+     abstract fun initializeViewModel():VM
 
     fun makeToast(massege:String){
         Toast.makeText(this,"Hello User",Toast.LENGTH_SHORT).show()
@@ -41,5 +37,6 @@ abstract class BaseActivity<DB:ViewDataBinding,VM:ViewModel>:AppCompatActivity()
 //        dialog.setMassage(message)
 //        dialog.show()
 //    }
+
 
 }

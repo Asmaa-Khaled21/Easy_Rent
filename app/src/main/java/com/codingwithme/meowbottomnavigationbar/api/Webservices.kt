@@ -1,4 +1,4 @@
-package com.codingwithme.meowbottomnavigationbar.Api
+package com.codingwithme.meowbottomnavigationbar.api
 
 import retrofit2.http.GET
 
