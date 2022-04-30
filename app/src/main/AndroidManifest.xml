@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.codingwithme.meowbottomnavigationbar">
+    package="com.codingwithme.easyrent">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".ui.main.MainActivity"
+        <activity android:name="com.codingwithme.easyrent.ui.main.MainActivity"
             android:exported="true" />
 
-        <activity android:name=".ui.pay.PayActivity"
+        <activity android:name="com.codingwithme.easyrent.ui.pay.PayActivity"
             android:exported="true" />
 
-        <activity android:name="com.codingwithme.meowbottomnavigationbar.ui.login.LoginActivity"
+        <activity android:name="com.codingwithme.easyrent.ui.login.LoginActivity"
             android:exported="true" />
 
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name="com.codingwithme.easyrent.ui.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

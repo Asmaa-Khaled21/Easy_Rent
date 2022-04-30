@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.codingwithme.meowbottomnavigationbar"
+        applicationId 'com.codingwithme.easyrent'
         minSdkVersion 22
         targetSdkVersion 31
         versionCode 1
