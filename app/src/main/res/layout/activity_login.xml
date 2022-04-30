@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.codingwithme.easyrent.ui.login.LoginViewModel"/>
+            type="com.sakura.easyrent.ui.login.LoginViewModel"/>
         <import type="android.view.View"/>
     </data>
 
