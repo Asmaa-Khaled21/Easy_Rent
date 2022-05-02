@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.sakura.easyrent.base.BaseActivity
 import com.sakura.easyrent.ui.main.MainActivity
@@ -47,6 +48,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() ,Navi
 
     override fun initializeViewModel(): LoginViewModel {
         return ViewModelProvider(this).get(LoginViewModel::class.java)
+    }
+
+    override fun gotoMainActivity() {
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
     }
 
     }
